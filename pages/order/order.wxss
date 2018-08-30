@@ -1,0 +1,17 @@
+/* pages/order/order.wxss */
+ .content{
+  width:100%;
+
+ 
+ text-align: center
+} 
+.img{
+  width:40%;
+ margin-top: 80px;
+}
+ .btn{
+   width: 30%;
+ color: white;
+  border-radius: 5px;
+  background-color: #ff9d38;
+} 

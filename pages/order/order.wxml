@@ -1,0 +1,6 @@
+<!-- pages/order/order.wxml -->
+ <view class='content'> 
+ <image src='../../images/icon/dd2.png' class='img' mode='widthFix'></image>
+
+ <button class='btn'>登录</button> 
+ </view> 

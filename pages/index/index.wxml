@@ -1,0 +1,39 @@
+<!--index.wxml--> 
+
+<view class='haibao'>
+  <swiper indicator-dots='true' indicator-color='1B82D1' indicator-active-color='#f00'  autoplay='true' duration='500' interval='3000' style='height:360rpx;'>
+    <block wx:for="{{haibao}}">
+      <swiper-item>
+        <image class='banner' src="{{item.image_url}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='hr'></view>
+ 
+<view class='content'>
+  <block wx:for="{{cat}}">
+  <view class='detail'>
+
+    <view class='cat'>{{item.cat_name}}</view>
+      
+    <view wx:for="{{goodsData}}" wx:for-item="itemName">
+      <view wx:if='{{itemName.cat_id ==item.cat_id}}'>
+        <block  wx:for="{{itemName.cat_goods}}" wx:for-item='good'>
+        <view class= 'good' id='{{good.default_product_id}}' bindtap='getDetail'>
+          <image class='image' src='{{good.image.m_url}}' mode='widthFix'></image>
+          <view class='desc'>
+            <view class='goodTitle'>{{good.name}}</view>
+            <view class='price'>
+              <view>￥{{good.price}}</view>
+              <view class='price_old'>￥{{good.mktprice}}</view>
+            </view>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
+    
+  </view>
+  </block>
+</view>

@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/me/me",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff9d38",
+    "navigationBarTitleText": "天际云选",
+    "navigationBarTextStyle":"white"
+  },
+ "tabBar": {
+   "color":"#999999",
+   "list": [{
+     "pagePath": "pages/index/index",
+     "text": "首页",
+     "iconPath": "/images/tabbar/sy-0.png",
+     "selectedIconPath": "/images/tabbar/sy-1.png"
+   },
+   {
+    "pagePath": "pages/order/order",
+    "text": "订单",
+    "iconPath": "/images/tabbar/dd-0.png",
+    "selectedIconPath": "/images/tabbar/dd-1.png"
+  },
+  {
+    "pagePath": "pages/me/me",
+    "text": "我的",
+    "iconPath": "/images/tabbar/me-0.png",
+    "selectedIconPath": "/images/tabbar/me-1.png"
+  }]
+ },
+ "debug":true
+
+}

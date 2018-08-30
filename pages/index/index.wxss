@@ -1,0 +1,61 @@
+/**index.wxss**/
+.content{ 
+  font-size: 15px;
+}
+.haibao{
+  width: 100%;
+  height: 40%;
+}
+.banner{
+  width: 100%;
+  height: 100%; 
+}
+.cat{
+  font-weight: bold;
+  width: 90%;
+  padding-left: 10px;
+  margin: 5px;
+  border-left: 3px solid #ff9d38;
+  }
+.detail{
+  width: 100%;
+  border-bottom: 10px solid #F8F8F8;
+}
+.good{
+  width: 95%;
+  
+  display: flex;
+  flex-direction: row;
+  
+  padding: 5px;
+  border-bottom: 1px solid #F8F8F8;
+}
+.image{
+  width: 40%;
+  
+}
+.desc{
+  width: 60%;
+  margin-left: 5px;
+}
+.goodTitle{
+  height: 70%;
+}
+.price{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+  color: red;
+}
+.price_old{
+  text-decoration: line-through;
+  color:black;
+  margin-left: 10px;
+}
+.hr{
+  width: 100%;
+  border-bottom:10px solid #f8f8f8;
+  margin-bottom: 10px;
+}

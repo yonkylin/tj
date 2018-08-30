@@ -1,0 +1,84 @@
+<!--pages/detail/detail.wxml-->
+<view class='navbg'>
+  <view id='0' class="{{currentTab==0? 'select':'normal'}}" bindtap='switchNav'>简介</view>
+  <view id='1' class="{{currentTab==1? 'select':'normal'}}" bindtap='switchNav'>食材用量</view>
+  <view id='2' class="{{currentTab==2? 'select':'normal'}}" bindtap='switchNav'>详情</view>
+</view>
+<view class='content' hidden='{{flag[0]}}'>
+
+  <swiper wx:for="{{banner}}" indicator-dots='false' autoplay='true' duration='500' interval='3000' bindchange='bindChange' style='height:{{imgHeights[current]}}rpx;'>
+    <swiper-item>
+
+      <image class='banner' src='{{item.l_url}}' mode="aspectFit" style='height:{{imgHeights[current]}}rpx;' bindload='imageLoad'></image>
+
+    </swiper-item>
+  </swiper>
+
+
+  <view class='title'>
+    <view class='title_up'>
+      <view class='title_up_title'>{{detail.title}}</view>
+      <view class='right_img'>
+        <image src='../../images/icon/star-0.png' class='star'></image>
+      </view>
+    </view>
+
+    <view class='price'>
+      <view>￥{{detail.price}}</view>
+      <view class='price_old'>￥{{detail.mktprice}}</view>
+    </view>
+  </view>
+
+  <view class='material'  wx:if='{{brief !=""}}'>
+    <view class='subTitle' style='font-size:17px;'>商品介绍</view>
+    <view>{{brief}}</view>
+    <view class='endLine'></view>
+  </view>
+  <block wx:for="{{material}}">
+    <view class='material'>
+      <view class='subTitle'>{{item.cook_name}}</view>
+      <block wx:for="{{item.ingredient}}" wx:for-item="itemName">
+        <view class='item'>
+          <view class='left'>{{itemName.ingrient_name}}</view>
+          <view class='right'>{{itemName.weight}}g</view>
+        </view>
+        <view class='hr'></view>
+      </block>
+
+    </view>
+    <view class='endLine'></view>
+  </block>
+  <view class='material' wx:if="{{img!=''}}">
+    <view class='subTitle'>详情</view>
+  </view>
+
+  <block wx:for="{{img}}" wx:key="{{index}}">
+    <image class='banner' src='{{item}}' mode='widthFix'></image>
+  </block>
+
+
+</view>
+<view hidden='{{flag[1]}}' class='top50'>
+<block wx:for="{{material}}" >
+  <view class='material'>
+    <view class='subTitle'>{{item.cook_name}}</view>
+    <block wx:for="{{item.ingredient}}" wx:for-item="itemName">
+      <view class='item'>
+        <view class='left'>{{itemName.ingrient_name}}</view>
+        <view class='right'>{{itemName.weight}}g</view>
+      </view>
+      <view class='hr'></view>
+    </block>
+
+
+
+  </view>
+  <view class='endLine'></view>
+</block>
+</view>
+
+<view hidden='{{flag[2]}}' class='top50'>
+<block wx:for="{{img}}" wx:key="index" >
+  <image class='banner' src='{{item}}' mode='widthFix'></image>
+</block>
+</view>

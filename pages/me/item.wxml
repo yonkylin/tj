@@ -1,0 +1,12 @@
+<template name='item'>
+<view class='item'>
+  <view class='img'>
+    <image src='{{src}}'></image>
+  </view>
+  <text class='item_title'>{{item_title}}</text>
+  <view class='right'>
+    <text>{{remark}}</text> >
+  </view>
+</view>
+<view class='hr2'></view>
+</template>

@@ -1,0 +1,31 @@
+<!--pages/me/me.wxml-->
+<view class='bg'>
+  <button class='btn'>登录</button>
+</view>
+<view class='hr'></view>
+<view class='item'>
+  <view class='img'>
+    <image src='../../images/icon/dd.png'></image>
+  </view>
+  <text class='item_title'>我的订单</text>
+  <view class='right'>
+    <text>查看全部订单</text> >
+  </view>
+</view>
+<view class='hr2'></view>
+
+<view class='item'>
+  <block wx:for='{{[0,1,2,3]}}' wx:key='index'>
+    <view class='status'>
+      <image src='{{statusIcon[index]}}'></image>
+      <text class='status_text'>{{status[index]}}</text>
+    </view>
+  </block>
+</view>
+<view class='hr2'></view>
+ <import src='item.wxml'/>
+ <template is='item' data='{{src:"../../images/icon/dz.png",item_title:"收货地址管理"}}'/>
+ <template is='item' data='{{src:"../../images/icon/yhq.png",item_title:"优惠券"}}'/>
+ <template is='item' data='{{src:"../../images/icon/qb.png",item_title:"钱包"}}'/>
+ <view class='hr'/>
+ <template is='item' data='{{src:"../../images/icon/sc.png",item_title:"我的收藏"}}'/>
